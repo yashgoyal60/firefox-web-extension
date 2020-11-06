@@ -1,0 +1,26 @@
+// content-script.js
+"use strict";
+document.body.style.border = "3px solid red";
+
+
+
+
+browser.runtime.onMessage.addListener(request => {
+	var i=0;
+  console.log("Message from the script:");
+  console.log(request.greeting);
+  var arr = request.greeting.split("\n");
+
+
+  window.addEventListener('keydown',function(event){
+	if (event.key === 'Enter') {
+		document.getElementById('page-chat-input-textarea-textarea').value = arr[i];
+		i =i+1;
+		console.log(arr[0]);
+
+
+
+}});
+  
+});
+

@@ -14,7 +14,7 @@ browser.runtime.onMessage.addListener(request => {
 
   window.addEventListener('keydown',function(event){
 	if (event.key === 'Enter') {
-		document.getElementById('page-chat-input-textarea-textarea').value = arr[i];
+		document.getElementById('page-chat-input-textarea-textarea').value = arr[i]; //change " page-chat-input-textarea-textarea" with your element
 		i =i+1;
 		console.log(arr[0]);
 
